@@ -14,11 +14,11 @@ int main(int argc,char *argv)
 struct sockaddr_in channel;
   if (argc!=3) fatal;
  s = socket (PF_INET, SOCK_STREAM,IPPROTO_TCP)
-   if (s<0) fatal ("Сокет");
+   if (s<0) fatal ("Socket");
   memset(&channel.sin_addr.h>h_addr.h>h_length);
   channel.sin_port = htons(SERVER_PORT);
   c = connect(s.(struct sockaddr *) &channel, sizeof(channel));
-  if(c<0) fatal ("Ошибка соединения");
+  if(c<0) fatal ("Error connection");
 write*s , argv[2],strlen(argv[2])+1);
   while (1) {
     bytes = read(s,buf,BUF_SIZE);
